@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <meta name="theme-color" content="##198754" />
+    <title>
+      AUTO.RIA - This page is an analog template of the famous for car sales
+      website
+    </title>
+    <meta
+      name="description"
+      content="This page is an analog template of the famous for car sales website."
+    />
+    <link rel="icon" href="./img/logo.svg"  />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="text-center">
+          <a href="./index.html"> <i class="fas fa-car-alt text-success p-2"></i> Cars Sale</a>
+        </h1>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row contant">
+        <div class="col-12 mb-5">
+          <div class="row">
+            <div
+              class="col-12 top-panel d-flex justify-content-end text-end mb-4"
+            >
+              <a
+                href="#"
+                class="wishlist-link text-success"
+                title="My Shopping Card"
+              >
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+              <a
+                href="wishlist.html"
+                class="wishlist-link text-danger"
+                id="wishListLink"
+                data-count="0"
+                title="My Wish List"
+              >
+                <i class="fas fa-heart"></i>
+              </a>
+            </div>
+            <div class="col-4">
+              <select
+                class="form-select bg-transparent"
+                id="sortingSelect"
+                aria-label="Default select example"
+              >
+                <option selected disabled value="">Sorting cars by ...</option>
+                <option value="price-ab">By price (from cheap to expensive)</option>
+                <option value="price-ba">By price (from expensive to cheap)</option>
+                <option value="top-ba">TOP (TOP First)</option>
+                <option value="vip-ba">VIP (VIP-First)</option>
+                <option value="vin-ab">By VIN code</option>
+                <option value="price-ab">
+                  By manufacturer (alphabetical order)
+                </option>
+                <option value="year-ab">
+                  By year of manufacture (from oldest to newest)
+                </option>
+                <option value="year-ba">
+                  By year of manufacture (from new to old)
+                </option>
+                <option value="rating-ab">
+                  By popularity (from low to high rating)
+                </option>
+                <option value="rating-ba">
+                  By popularity (from high to low rating)
+                </option>
+                <option value="seller-ab">
+                  By seller (alphabetical order)
+                </option>
+              </select>
+            </div>
+            <form name="searchForm" id="searchForm" class="col-6 search-input">
+              <div class="row">
+                <div class="col-10">
+                  <input
+                    class="form-control me-2 bg-transparent"
+                    type="search"
+                    placeholder="Search Car on Web ..."
+                    aria-label="Search"
+                    name="search"
+                  />
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-outline-success btn-search"
+                    type="submit"
+                    name="btn-search"
+                  >
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div
+              class="col-2 d-flex align-items-center justify-content-end masonry-btns"
+              id="masonryBtns"
+            >
+              <button class="button btn btn-secondary" data-action="2">
+                <i class="fas fa-border-all"></i>
+              </button>
+              <button class="button btn btn btn-success" data-action="1">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <form class="filter-form" id="filterForm" name="filterForm">
+            <button
+              type="submit"
+              class="filter-btn btn btn-success fw-bold text-uppercase"
+            >
+              Filtering
+            </button>
+            <button
+              type="reset"
+              class="filter-btn btn btn-secondary fw-bold text-uppercase"
+            >
+              Reset
+            </button>
+          </form>
+        </div>
+        <div class="col-9">
+          <div class="g-0 row row-cols-1 car-list" id="carList"></div>
+          <div class="see-more d-flex justify-content-center pt-3 pb-4">
+            <button class="btn btn-success" id="seeMoreBtn">See More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-window">
+      <p class="cookies-text fw-bold">
+        This website uses cookies to ensure you get the best experience
+      </p>
+      <button
+        class="btn-cookies btn btn-success fw-bold text-uppercase"
+        id="btnModalClose"
+      >
+        Got It
+      </button>
+    </div>
+    <a href="#" class="to-top-link" id="toTopLink"><i class="fas fa-chevron-up"></i></a>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
